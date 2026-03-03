@@ -6,6 +6,7 @@
     <title>Assessoria | Regularize seu Título em 2026</title>
     <meta name="description" content="Auxílio do EdocBr de forma prática e segura.">
     <link rel="icon" type="image/png" href="https://edocbr.com.br/wp-content/uploads/2024/09/logo-edocbr.png">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -15,10 +16,12 @@
             --light-color: #ecfdf5;
             --dark-color: #064e3b;
         }
+        
         /* Estratégia 1: Box-Sizing Universal */
         *, *::before, *::after {
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Inter', sans-serif;
             background: #f0f4f8;
@@ -313,6 +316,7 @@
             font-size: 0.8rem;
             color: #a7f3d0;
         }
+
         /* Sticky CTA para Mobile */
         .sticky-cta {
             position: fixed;
@@ -325,6 +329,7 @@
             z-index: 90;
             display: none; /* Ativado via JS */
         }
+
         @media (min-width: 768px) {
             .main-wrapper {
                 padding: 0 1rem;
@@ -370,12 +375,16 @@
     </style>
 </head>
 <body>
-        <header>
-    <img src="https://cdn-icons-png.flaticon.com/512/197/197386.png" alt="EdocBr Logo">
-    Título EdocBR
-            <button id="mobileMenuBtn">
+    <div class="main-wrapper">
+        <header class="header">
+            <div class="logo-container">
+    <img src="https://cdn-icons-png.flaticon.com/512/197/197386.png" alt="EdocBr Logo" class="logo">
+    <span class="brand-name">Título EdocBR</span>
+</div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
             </button>
-            <nav id="navMenu">
+            <nav class="nav-menu" id="navMenu">
                 <ul>
                     <li><a href="#home">Início</a></li>
                     <li><a href="#beneficios">Benefícios</a></li>
@@ -384,120 +393,247 @@
                 </ul>
             </nav>
         </header>
-         <main id="home">
+
+         <main class="main-content" id="home">
+            <div class="container">
                 <!-- Hero Section -->
-                <section>
-                    <h1>
-                       Título EdocBR
+                <section class="text-center mb-12">
+                    <h1 class="section-title">
+                        Título EdocBR
                     </h1>
-                    <p style="font-size: 1.15rem;">
-    Receba seu Título Primeira ou Segunda Via com auxílio do EdocBr de forma prática e segura.
+                    <p class="text-center mb-4" style="font-size: 1.15rem;">
+    Receba seu Primeiro Título ou Faça a Regularização com auxílio do EdocBr de forma digital e segura.
 </p>
-                    <p>Selecione o tipo que precisa:</p>
-                        <a href="/tirar">
-                             Tirar Título Agora
+                    
+                    <p class="text-lg font-semibold text-center mb-4">Selecione o tipo que precisa:</p>
+                    
+                    <div class="btn-container">
+                        <a href="/tirar" class="btn-primary">
+                            <i class="fas fa-id-card mr-2"></i> Tirar Título Agora
                         </a>
-                        <a href="/reg">
-                             Regularizar Título
+                        <a href="/regula" class="btn-primary">
+                            <i class="fas fa-sync-alt mr-2"></i> Regularizar Título
                         </a>
+                    </div>
                 </section>
+
                 <!-- Seção Diferença dos Botões -->
-                <section>
-                    <h2>Qual documento você precisa?</h2>
-                            <h3>Tirar Título Agora</h3>
-                            <p>Documento emitido para quem nunca teve título de eleitor ou precisa da primeira via para regularização civil.</p>
-                            <p><strong>Indicado para:</strong> Pessoas que precisam emitir o documento pela primeira vez para regularização, concursos públicos, empregos ou outros fins oficiais.</p>
-                            <h3>Regularizar Título</h3>
-                            <p>Documento emitido para quem já possui título mas está com pendências, multas ou precisa da segunda via.</p>
-                            <p><strong>Indicado para:</strong> Pessoas que já possuem o documento, mas precisam comprovar a regularidade para concursos, empregos ou evitar o bloqueio do CPF.</p>
+                <section class="mb-12">
+                    <h2 class="section-title">Qual documento você precisa?</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="benefit-card">
+                            <h3 class="text-xl font-bold mb-2">Tirar Título Agora</h3>
+                            <p class="text-sm text-gray-600 mb-2">Documento emitido para quem nunca teve título de eleitor ou precisa da primeira via para regularização civil.</p>
+                            <p class="text-sm"><strong>Indicado para:</strong> Pessoas que precisam emitir o documento pela primeira vez para regularização, concursos públicos, empregos ou outros fins oficiais.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <h3 class="text-xl font-bold mb-2">Regularizar Título</h3>
+                            <p class="text-sm text-gray-600 mb-2">Documento emitido para quem já possui título mas está com pendências, multas ou precisa da segunda via.</p>
+                            <p class="text-sm"><strong>Indicado para:</strong> Pessoas que já possuem o documento, mas precisam comprovar a regularidade para concursos, empregos ou evitar o bloqueio do CPF.</p>
+                        </div>
+                    </div>
                 </section>
+
                 <!-- Seção Depoimentos -->
                 <section id="depoimentos">
-                    <h2>Depoimentos de Quem Usou o EdocBr</h2>
+                    <h2 class="section-title">Depoimentos de Quem Usou o EdocBr</h2>
+                    
+                    <div class="testimonial">
                         <p>"Facilitou muito! Consegui minha segunda via do Título sem dor de cabeça, tudo rápido e digital"</p>
+                        <div class="testimonial-author">
                             <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="João Silva">
+                            <div>
                                 <h4>João Silva, 32 anos</h4>
                                 <p>Rio de Janeiro/RJ</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
                         <p>"Precisava do Título para uma pendência pessoal e o EdocBr me ajudou a resolver tudo muito mais fácil. Excelente serviço!"</p>
+                        <div class="testimonial-author">
                             <img src="https://media.licdn.com/dms/image/v2/C4E03AQGCn_E4boGWXQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1600729289662?e=2147483647&v=beta&t=uIvuna-uk09uLKL3kVn1ZWaKVdinKuSew0GoPriIv3s" alt="Matheus Oliveira">
+                            <div>
                                 <h4>Matheus Oliveira, 19 anos</h4>
                                 <p>Belo Horizonte/MG</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
                         <p>"O processo com o EdocBr foi simples e prático. Consegui minha regularização sem complicações."</p>
+                        <div class="testimonial-author">
                             <img src="https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/7e2e1371cfbf83e74c82220a11b83800~tplv-tiktokx-cropcenter:720:720.jpeg?dr=9640&refresh_token=09169c01&x-expires=1769184000&x-signature=NjBhAaA%2FAZBQcvni%2Fvv5cwFblcs%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5" alt="Carlos Souza">
+                            <div>
                                 <h4>Carlos Souza, 38 anos</h4>
                                 <p>São Paulo/SP</p>
-                      <a href="/tirar">
-                             Tirar Título Agora
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-container text-center">
+                        <a href="/tirar" class="btn-primary">
+                            <i class="fas fa-play-circle mr-2"></i> Tirar Título Agora
                         </a>
-                        <a href="/reg">
-                             Regularizar Título
+                        <a href="/regula" class="btn-primary">
+                            <i class="fas fa-play-circle mr-2"></i> Regularizar Título
                         </a>
+                    </div>
                 </section>
+
                 <!-- Seção Como Funciona -->
                 <section id="como-funciona">
-                    <h2>Como Solicitar com o EdocBr</h2>
-                    <ol>
+                    <h2 class="section-title">Como Solicitar com o EdocBr</h2>
+                    <ol class="steps">
                         <li><strong>Verifique sua situação</strong> - Informe seus dados para confirmar sua necessidade de regularização ou primeira via.</li>
                         <li><strong>Adquira o serviço</strong> - Receba orientações detalhadas e a lista de documentos necessários.</li>
                         <li><strong>Siga o processo orientado</strong> - O EdocBr guia você por cada etapa de forma clara e segura.</li>
                         <li><strong>Receba seu documento</strong> - Obtenha seu Título de Eleitor diretamente pelos canais oficiais.</li>
                     </ol>
-                        <h3>💡 O que você recebe com o EdocBr:</h3>
-                                <h4>Documentação Completa</h4>
+                    
+                    <div class="highlight-box">
+                        <h3 class="font-bold text-lg mb-2">💡 O que você recebe com o EdocBr:</h3>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Documentação Completa</h4>
                                 <p>Lista detalhada de documentos necessários para a solicitação.</p>
-                                <h4>Canais Oficiais</h4>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Canais Oficiais</h4>
                                 <p>Informações sobre como acessar os canais oficiais para a emissão do documento.</p>
-                                <h4>Suporte Especializado</h4>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Suporte Especializado</h4>
                                 <p>Acesso à nossa equipe para esclarecer dúvidas durante todo o processo.</p>
-                        <h3>Garantia de Satisfação</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="guarantee-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3 class="font-bold mt-2">Garantia de Satisfação</h3>
                         <p>Se não conseguir emitir seu documento com o EdocBr, devolvemos seu investimento.</p>
-                       <a href="/tirar">
-                             Tirar Título Agora
+                    </div>
+                    
+                    <div class="btn-container text-center">
+                        <a href="/tirar" class="btn-primary">
+                            <i class="fas fa-check-circle mr-2"></i> Tirar Título Agora
                         </a>
-                        <a href="/reg">
-                             Regularizar Título
+                        <a href="/regula" class="btn-primary">
+                            <i class="fas fa-check-circle mr-2"></i> Regularizar Título
                         </a>
+                    </div>
                 </section>
+
                 <!-- Seção Benefícios -->
                 <section id="beneficios">
-                    <h2>Benefícios da nossa assessoria</h2>
-                            <h3> Sem Filas ou Burocracia</h3>
+                    <h2 class="section-title">Benefícios da nossa assessoria</h2>
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <h3><i class="fas fa-bolt"></i> Sem Filas ou Burocracia</h3>
                             <p>Esqueça a confusão dos sistemas oficiais. Nós facilitamos e organizamos todo o processo para você.</p>
-                            <h3> Caminho Especializado</h3>
+                        </div>
+                        <div class="benefit-card">
+                            <h3><i class="fas fa-route"></i> Caminho Especializado</h3>
                             <p>Analisamos sua situação específica e entregamos o caminho mais rápido para a regularização.</p>
-                            <h3> Garantia de Direitos</h3>
+                        </div>
+                        <div class="benefit-card">
+                            <h3><i class="fas fa-shield-check"></i> Garantia de Direitos</h3>
                             <p>Mantenha seu CPF ativo, evite multas e garanta sua participação em concursos e emissão de documentos.</p>
+                        </div>
+                    </div>
                 </section>
+
                 <!-- Seção Dúvidas -->
                 <section id="duvidas">
-                    <h2>Dúvidas Frequentes</h2>
-                            Por que pagar se é de graça no governo?
+                    <h2 class="section-title">Dúvidas Frequentes</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Por que pagar se é de graça no governo?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
                             <p>Você paga pela conveniência, guia prático, facilitado e pela garantia de que não cometerá erros que atrasem sua regularização. É economia de tempo e certeza do que estará fazendo.</p>
-                            Quanto tempo demora?
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Quanto tempo demora?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
                             <p>Nossa análise é imediata. O prazo final depende do processamento do órgão, mas garantimos o caminho mais rápido.</p>
-                            Meu CPF está bloqueado por causa do título?
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Meu CPF está bloqueado por causa do título?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
                             <p>Sim, a irregularidade eleitoral pode levar à suspensão do CPF. Nós entregamos o caminho para resolver isso.</p>
-                            Quanto custa o serviço do EdocBr?
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Quanto custa o serviço do EdocBr?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
                             <p>O serviço custa R$ 37,80, incluindo acesso à documentação completa e suporte especializado para a solicitação.</p>
+                        </div>
+                    </div>
                 </section>
+
                 <!-- Seção Esclarecimento Importante -->
                 <section id="esclarecimento">
-                    <h2>Esclarecimento Importante</h2>
+                    <h2 class="section-title">Esclarecimento Importante</h2>
+                    <div class="highlight-box">
                         <p>A EdocBr não é uma entidade governamental e não realiza a emissão direta de documentos. Somos uma empresa especializada na venda de guias digitais no formato de e-books, que fornecem um passo a passo legal, claro e detalhado para que você possa solicitar seus documentos de forma prática e segura por conta própria, utilizando os canais oficiais.</p>
-                       <a href="/tirar">
-                             Tirar Título Agora
+                    </div>
+                    <div class="btn-container text-center">
+                        <a href="/tirar" class="btn-primary">
+                            <i class="fas fa-check-circle mr-2"></i> Tirar Título Agora
                         </a>
-                        <a href="/reg">
-                             Regularizar Título
+                        <a href="/regula" class="btn-primary">
+                            <i class="fas fa-check-circle mr-2"></i> Regularizar Título
                         </a>
+                    </div>
                 </section>
+            </div>
         </main>
-        <a href="/regula">
-             Regularizar Agora
+    </div>
+
+    <div class="sticky-cta" id="stickyCta">
+        <a href="/tirar" class="btn-primary">
+            <i class="fas fa-id-card mr-2"></i> Título Agora
         </a>
-    <footer>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
                 <h3>EdocBr</h3>
                 <p>Facilitando a regularização do seu Título de Eleitor</p>
+            </div>
+            <div class="footer-column">
                 <h3>Links Úteis</h3>
                 <ul>
                     <li><a href="#home">Início</a></li>
@@ -505,13 +641,85 @@
                     <li><a href="#depoimentos">Depoimentos</a></li>
                     <li><a href="#como-funciona">Como Funciona</a></li>
                 </ul>
+            </div>
+            <div class="footer-column">
                 <h3>Legal</h3>
                 <ul>
                     <li><a href="/termos">Termos de Uso</a></li>
                     <li><a href="/privacidade">Política de Privacidade</a></li>
                 </ul>
-            <p>© 2026 EdocBr. Todos os direitos reservados. J NEGOCIOS ONLINE LTDA</p>
-            <p>Não somos um site governamental. Somos uma empresa privada de assessoria.</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026 EdocBr. Todos os direitos reservados. CNPJ: 10.158.686/0001-05</p>
+            <p class="mt-2 text-xs opacity-75">Não somos um site governamental. Somos uma empresa privada de assessoria.</p>
+        </div>
     </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if(navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+
+        // Sticky CTA Logic
+        const stickyCta = document.getElementById('stickyCta');
+        window.addEventListener('scroll', () => {
+            if (window.innerWidth < 768) {
+                const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                if (scrollPercent > 30) {
+                    stickyCta.style.display = 'block';
+                } else {
+                    stickyCta.style.display = 'none';
+                }
+            }
+        });
+        
+        // Open first FAQ answer by default
+        if(document.querySelector('.faq-answer')) {
+            document.querySelector('.faq-answer').style.display = 'block';
+            document.querySelector('.faq-question i').classList.replace('fa-chevron-down', 'fa-chevron-up');
+        }
+    </script>
 </body>
 </html>
