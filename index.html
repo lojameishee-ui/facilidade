@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assessoria Digital com facilidade e praticidade</title>
-    <meta name="description" content="Auxílio do EdocBr de forma prática e segura.">
+    <title>Guia Digital Título de Eleitor | EdocBR</title>
+    <meta name="description" content="Guia digital (e-book) com passo a passo para tirar ou regularizar seu Título de Eleitor. Não somos governo. Conteúdo informativo.">
     <link rel="icon" type="image/png" href="https://edocbr.com.br/wp-content/uploads/2024/09/logo-edocbr.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,7 +17,6 @@
             --dark-color: #064e3b;
         }
         
-        /* Estratégia 1: Box-Sizing Universal */
         *, *::before, *::after {
             box-sizing: border-box;
         }
@@ -32,7 +31,6 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            /* Estratégia 3: Acessibilidade e Padrão Web (16px base) */
             font-size: 16px;
         }
         .main-wrapper {
@@ -317,7 +315,35 @@
             color: #a7f3d0;
         }
 
-        /* Sticky CTA para Mobile */
+        /* ============================================
+           AVISO DE ISENÇÃO — LINHA ÚNICA COMPACTA
+           ============================================ */
+        .disclaimer-banner {
+            background: #f0fdf4;
+            border: 1px solid #6ee7b7;
+            border-radius: 6px;
+            padding: 0.45rem 0.9rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .disclaimer-banner p {
+            margin: 0;
+            font-size: 0.78rem;
+            color: #065f46;
+            line-height: 1.4;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        @media (max-width: 480px) {
+            .disclaimer-banner p {
+                white-space: normal;
+            }
+        }
+        /* ============================================ */
+
         .sticky-cta {
             position: fixed;
             bottom: 0;
@@ -327,7 +353,7 @@
             padding: 0.8rem 1rem;
             box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
             z-index: 90;
-            display: none; /* Ativado via JS */
+            display: none;
         }
 
         @media (min-width: 768px) {
@@ -378,9 +404,9 @@
     <div class="main-wrapper">
         <header class="header">
             <div class="logo-container">
-    <img src="https://cdn-icons-png.flaticon.com/512/197/197386.png" alt="EdocBr Logo" class="logo">
-    <span class="brand-name">Título EdocBR</span>
-</div>
+                <img src="https://cdn-icons-png.flaticon.com/512/197/197386.png" alt="EdocBr Logo" class="logo">
+                <span class="brand-name">Título EdocBR</span>
+            </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
@@ -394,16 +420,23 @@
             </nav>
         </header>
 
-         <main class="main-content" id="home">
+        <main class="main-content" id="home">
             <div class="container">
+
+                <!-- AVISO COMPACTO -->
+                <div class="disclaimer-banner">
+                    <p>🔒 Seus dados e pagamento são protegidos. Você fará o processo sozinho, com nosso passo a passo digital.</p>
+                </div>
+                <!-- ============== -->
+
                 <!-- Hero Section -->
                 <section class="text-center mb-12">
                     <h1 class="section-title">
                         Título EdocBR
                     </h1>
                     <p class="text-center mb-4" style="font-size: 1.15rem;">
-    Receba seu Primeiro Título ou Faça a Regularização com auxílio do EdocBr de forma digital e segura.
-</p>
+                        Receba seu Primeiro Título ou Faça a Regularização com auxílio do EdocBr de forma digital e segura.
+                    </p>
                     
                     <p class="text-lg font-semibold text-center mb-4">Selecione o tipo que precisa:</p>
                     
@@ -450,7 +483,7 @@
                     </div>
                     
                     <div class="testimonial">
-                        <p>"Precisava do Título para uma pendência pessoal e o EdocBr me ajudou a resolver tudo muito mais fácil. Excelente serviço!"</p>
+                        <p>"Precisava do Título para uma pendência pessoal e o EdocBr me ajudou a resolver tudo muito mais fácil. Excelente guia!"</p>
                         <div class="testimonial-author">
                             <img src="https://media.licdn.com/dms/image/v2/C4E03AQGCn_E4boGWXQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1600729289662?e=2147483647&v=beta&t=uIvuna-uk09uLKL3kVn1ZWaKVdinKuSew0GoPriIv3s" alt="Matheus Oliveira">
                             <div>
@@ -483,12 +516,12 @@
 
                 <!-- Seção Como Funciona -->
                 <section id="como-funciona">
-                    <h2 class="section-title">Como Solicitar com o EdocBr</h2>
+                    <h2 class="section-title">Como Funciona o Guia EdocBr</h2>
                     <ol class="steps">
-                        <li><strong>Verifique sua situação</strong> - Informe seus dados para confirmar sua necessidade de regularização ou primeira via.</li>
-                        <li><strong>Adquira o serviço</strong> - Receba orientações detalhadas e a lista de documentos necessários.</li>
-                        <li><strong>Siga o processo orientado</strong> - O EdocBr guia você por cada etapa de forma clara e segura.</li>
-                        <li><strong>Receba seu documento</strong> - Obtenha seu Título de Eleitor diretamente pelos canais oficiais.</li>
+                        <li><strong>Verifique sua situação</strong> - Identifique o que você precisa: primeira via ou regularização.</li>
+                        <li><strong>Adquira o guia</strong> - Receba orientações detalhadas e a lista de documentos necessários.</li>
+                        <li><strong>Siga o passo a passo</strong> - O EdocBr guia você por cada etapa de forma clara e segura.</li>
+                        <li><strong>Acesse pelos canais oficiais</strong> - Obtenha seu Título de Eleitor diretamente pelos canais oficiais do governo.</li>
                     </ol>
                     
                     <div class="highlight-box">
@@ -540,7 +573,7 @@
 
                 <!-- Seção Benefícios -->
                 <section id="beneficios">
-                    <h2 class="section-title">Benefícios da nossa assessoria</h2>
+                    <h2 class="section-title">Benefícios do nosso guia</h2>
                     <div class="benefits-grid">
                         <div class="benefit-card">
                             <h3><i class="fas fa-bolt"></i> Sem Filas ou Burocracia</h3>
@@ -593,11 +626,11 @@
                     
                     <div class="faq-item">
                         <div class="faq-question">
-                            <span>Quanto custa o serviço do EdocBr?</span>
+                            <span>Quanto custa o guia do EdocBr?</span>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>O serviço custa R$ 37,80, incluindo acesso à documentação completa e suporte especializado para a solicitação.</p>
+                            <p>O guia custa R$ 37,80, incluindo acesso à documentação completa e suporte especializado para a solicitação.</p>
                         </div>
                     </div>
                 </section>
@@ -617,6 +650,7 @@
                         </a>
                     </div>
                 </section>
+
             </div>
         </main>
     </div>
@@ -652,12 +686,11 @@
         </div>
         <div class="copyright">
             <p>© 2026 EdocBr. Todos os direitos reservados. CNPJ: 10.158.686/0001-05</p>
-            <p class="mt-2 text-xs opacity-75">Não somos um site governamental. Somos uma empresa privada de assessoria.</p>
+            <p class="mt-2 text-xs opacity-75">Não somos um site governamental. Somos uma empresa privada de conteúdo educativo digital.</p>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navMenu = document.getElementById('navMenu');
         
@@ -668,32 +701,23 @@
                 : '<i class="fas fa-bars"></i>';
         });
         
-        // FAQ Accordion
         const faqQuestions = document.querySelectorAll('.faq-question');
         faqQuestions.forEach(question => {
             question.addEventListener('click', () => {
                 const answer = question.nextElementSibling;
                 const icon = question.querySelector('i');
-                
                 answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
                 icon.classList.toggle('fa-chevron-down');
                 icon.classList.toggle('fa-chevron-up');
             });
         });
         
-        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                
                 const target = document.querySelector(this.getAttribute('href'));
                 if(target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
+                    window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
                     if(navMenu.classList.contains('active')) {
                         navMenu.classList.remove('active');
                         mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
@@ -702,20 +726,14 @@
             });
         });
 
-        // Sticky CTA Logic
         const stickyCta = document.getElementById('stickyCta');
         window.addEventListener('scroll', () => {
             if (window.innerWidth < 768) {
                 const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-                if (scrollPercent > 30) {
-                    stickyCta.style.display = 'block';
-                } else {
-                    stickyCta.style.display = 'none';
-                }
+                stickyCta.style.display = scrollPercent > 30 ? 'block' : 'none';
             }
         });
         
-        // Open first FAQ answer by default
         if(document.querySelector('.faq-answer')) {
             document.querySelector('.faq-answer').style.display = 'block';
             document.querySelector('.faq-question i').classList.replace('fa-chevron-down', 'fa-chevron-up');
