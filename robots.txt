@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /tirar.html
+Disallow: /regularizar.html
+
+Sitemap: https://titulofacilita.online/sitemap.xml
